@@ -1,0 +1,112 @@
+/*! 
+\mainpage 
+<!--AIOUSB Manual-->
+\if logo_on
+<center>
+\htmlonly
+<img src="http://accesio.com/images/emaillogo.png" alt="aiousb"/><br/>
+Version: $(VERSION)
+\endhtmlonly
+</center>
+\endif
+
+<h2>Introduction</h2>
+AIOUSB is the de facto standard tool for generating documentation from
+annotated C++ sources, but it also supports other popular programming 
+languages such as C, Objective-C, C#, PHP, Java, Python, IDL 
+(Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
+
+Doxygen can help you in three ways:
+<ol>
+<li> It can generate an on-line documentation browser (in HTML) and/or an 
+     off-line reference manual (in \LaTeX) from a set 
+     of documented source files. 
+     There is also support for generating output in RTF (MS-Word), 
+     PostScript, hyperlinked PDF, compressed HTML, and Unix man pages.
+     The documentation is extracted directly from the sources, which
+     makes it much easier to keep the documentation consistent with the
+     source code.
+<li> You can also use doxygen for creating normal documentation (as I did
+     for the doxygen user manual and web-site).
+</ol>
+
+AIOUSB is developed under Mac OS X and Linux, but is set-up to be highly 
+portable. As a result, it runs on most other Unix flavors as well. 
+Furthermore, executables for Windows are available.
+
+\n
+This manual is divided into three parts, each of which is divided into several sections.
+
+The first part forms a user manual:
+<ul>
+
+<li>Section \ref install discusses how to 
+      <a href="http://github.com/accesio/AIOUSB">download</a>, compile and install
+                     doxygen for your platform.
+<li>Section \ref aiousb tells you about the AIOUSB C and C++ libraries.
+<li>Section \ref classlib tells you about the AIOUSB CLASSLIB C++ libraries.
+
+</ul>
+
+The second part forms a reference manual:
+
+The third part provides information for developers:
+
+\n<h2>AIOUSB License</h2>
+\addindex license
+\addindex GPL
+
+Copyright &copy; 1993-2015 by <a href="http://www.accesio.com">ACCES I/O Products Inc</a> and 
+<a href="mailto:jdamon@accesio.com">Jimi Damon</a>.<p>
+
+Permission to use, copy, modify, and distribute this software and its
+documentation under the terms of the GNU Lesser Public License is hereby 
+granted. No representations are made about the suitability of this software 
+for any purpose. It is provided "as is" without express or implied warranty.
+See the 
+<a href="http://www.gnu.org/licenses/lgpl-3.0.en.html">GNU Lesser General Public License</a>
+for more details.
+<p>
+Documents produced by doxygen are derivative works derived from the
+input used in their production; they are not affected by this license.
+
+<h2>User examples</h2>
+
+Doxygen supports a number of \ref output "output formats" where HTML is the
+most popular one. I've gathered 
+<a href="http://www.doxygen.org/results.html">some nice examples</a> 
+of real-life projects using doxygen.
+
+These are part of a larger
+<a href="http://www.doxygen.org/projects.html">list of projects</a> 
+that use doxygen.
+If you know other projects, let <a href="mailto:jdamon@accesio.com?subject=New%20project%20using%20Doxygen">me</a> 
+know and I'll add them. 
+
+<h2>Future work</h2>
+Although doxygen is successfully used by large number of companies and 
+open source projects already, there is always room for improvement. 
+<p>
+You can submit enhancement requests in
+<a href="https://bugzilla.gnome.org/buglist.cgi?product=doxygen&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bug_severity=enhancement">the bug tracker</a>.
+Make sure the severity of the bug report is set to "enhancement".
+
+<h2>Acknowledgments</h2>
+\addindex acknowledgments
+Thanks go to:
+<ul>
+<li><a href="mailto:jhentges@accesio.com?subject=Questions">John Hentges</a>
+<li>\addindex Doxygen 
+ Dimitri van Heesch ( and other Doxygen contributors ) for creating the amazing program
+ known as Doxygen. This help ACCES I/O Products improve its technical documentation.
+<li><a href="http://www.comedi.org/">COMEDI Project</a>
+<li>Dave Arocot
+<li>Jay Dolan
+</ul>
+
+\htmlonly
+Go to the <a href="install.html">next</a> section.
+\endhtmlonly
+
+*/
+
