@@ -596,14 +596,13 @@ WARN_LOGFILE           =
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 
-# The INPUT tag can be used to specify the files and/or directories that contain
-# documented source files. You may enter file names like "myfile.cpp" or
-# directories like "/usr/src/myproject". Separate the files or directories
-# with spaces.
+# The INPUT tag is used to specify the files and/or directories that contain
+# documented source files. You may enter file names like myfile.cpp or
+# directories like /usr/src/myproject. Separate the files or directories with
+# spaces.
+# Note: If this tag is empty the current directory is searched.
 
-INPUT                  = classlib/  lib/
-
-
+INPUT                  = doc/index.doc doc/aiousb.doc doc/grouping.doc doc/classlib.doc classlib/  lib/
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is
@@ -838,7 +837,7 @@ HTML_FOOTER            =
 # the style sheet file to the HTML output directory, so don't put your own
 # stylesheet in the HTML output directory as well, or it will be erased!
 
-HTML_STYLESHEET        =
+HTML_STYLESHEET        = doxygen_manual.css
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output.
 # Doxygen will adjust the colors in the stylesheet and background images
