@@ -9,10 +9,10 @@
  *
  *
  */
-/*! \page classlib Classlib
+/*! \page classlib AIOUSB classlib
 
 
-\section classlib_modules Classlib Modules
+\section classlib_modules Modules
 
 You can make an entity a member of a specific group by putting 
 a \ref cmdingroup "\\ingroup" command inside its documentation block.
