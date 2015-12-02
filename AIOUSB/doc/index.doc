@@ -5,7 +5,7 @@
 <center>
 \htmlonly
 <img src="http://accesio.com/images/emaillogo.png" alt="aiousb"/><br/>
-Version: $(VERSION)
+Version: $Format: %h$
 \endhtmlonly
 </center>
 \endif

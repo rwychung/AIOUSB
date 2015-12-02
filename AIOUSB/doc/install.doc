@@ -11,7 +11,10 @@
 
 \section install_src_unix Compiling from source on UNIX
 
-Assuming you’re starting from the root directory of the distribution, installing AIOUSB consists of performing these few simple steps (logged in as 'root', of course).
+Assuming you’re starting from the root directory of the distribution,
+installing AIOUSB consists of performing these few simple steps
+(logged in as 'root', of course). 
+
 ~~~{.sh}
 mkdir /usr/local/include/aiousb
 cp -p lib/aiousb.h /usr/local/include/aiousb
@@ -19,9 +22,15 @@ cp -p lib/libaiousb*.a /usr/local/lib
 export CPATH=/usr/local/include/libusb-1.0/:/usr/local/include/aiousb
 ~~~
 
-You can, of course, place the AIOUSB files (aiousb.h, libaiousb*.a) elsewhere, such as in the local directory of the application program that will use AIOUSB. The above steps are suggested in order to conform to the usual Linux conventions and make the AIOUSB files available to all users and all application programs.
+You can, of course, place the AIOUSB files (aiousb.h, libaiousb*.a)
+elsewhere, such as in the local directory of the application program
+that will use AIOUSB. The above steps are suggested in order to
+conform to the usual Linux conventions and make the AIOUSB files
+available to all users and all application programs.
 
-If you do locate the libraries and header files somewhere else, there is an environment variable you can set which is used by the sample program make files:
+If you do locate the libraries and header files somewhere else, there
+is an environment variable you can set which is used by the sample
+program make files:
 
 ~~~{.sh}
 export AIOUSBLIBDIR="/path/to/the/AIOUSB_libraries/"
