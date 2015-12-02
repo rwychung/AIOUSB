@@ -651,7 +651,9 @@ const char *get_cal_mode( int code )
     }
 }
 
-/*----------------------------------------------------------------------------*/
+/**
+ * @cond INTERNAL_DOCUMENTATION
+ *----------------------------------------------------------------------------*/
 const char *get_trigger_mode( int code )
 {
     if (code & AD_TRIGGER_TIMER) {
@@ -683,7 +685,7 @@ const char *get_scan_mode(int code)
   }
   
 }
-/** @cond INTERNAL_DOCUMENTATION */
+
 #define CALIBRATION_STRING "calibration"
 #define TRIGGER_STRING "trigger"
 #define REFERENCE_STRING "reference"
