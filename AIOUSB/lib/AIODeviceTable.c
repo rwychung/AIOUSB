@@ -450,10 +450,19 @@ PRIVATE AIORET_TYPE ProductNameToID(const char *name)
 }
 
 /*----------------------------------------------------------------------------*/
+/**
+ * @note Will call AIOUSB_Init() in case the AIOUSB API has not been initialized
+ * with the AIOUSB_Init() function. This is a convenience function.
+ * @return if < 0 Error else SUCCESS
+ */
 AIORET_TYPE GetDevices(void) 
 {
     unsigned long deviceMask = 0;
     int index;
+    if ( !AIOUSB_IsInit() ) { 
+        AIOUSB_Init();
+    } 
+
     AIO_ERROR_VALID_DATA( AIOUSB_ERROR_NOT_INIT, AIOUSB_IsInit() );
     /**
      * @note
