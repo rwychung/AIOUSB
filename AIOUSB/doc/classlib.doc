@@ -9,14 +9,13 @@
  *
  *
  */
-/*! \page classlib AIOUSB classlib
-
+/*! 
+\page classlib AIOUSB classlib
 
 \section classlib_modules Modules
 
 You can make an entity a member of a specific group by putting 
 a \ref cmdingroup "\\ingroup" command inside its documentation block.
-
 
 Note that compound entities (like classes, files and namespaces) can
 be put into multiple groups, but members (like variable, functions, typedefs
@@ -134,22 +133,6 @@ Click <a href="examples/memgrp/html/class_test.html">here</a>
 Here Group1 is displayed as a subsection of the "Public Members". And
 Group2 is a separate section because it contains members with
 different protection levels (i.e. public and protected).
-
-\section subpaging Subpaging
-
-Information can be grouped into pages using the \ref cmdpage "\\page" and
-\ref cmdsubpage "\\mainpage" commands. Normally, this results in a
-flat list of pages, where the "main" page is the first in the list. 
-
-Instead of adding structure using the approach described in section
-\ref modules "modules" it is often more natural and convenient to add 
-additional structure to the pages using the \ref cmdsubpage "\\subpage" 
-command. 
-
-For a page A the \\subpage command adds a link to another page B and at 
-the same time makes page B a subpage of A. This has the effect of making
-two groups GA and GB, where GB is part of GA, page A is put in group GA, 
-and page B is put in group GB.
 
 \htmlonly
 Go to the <a href="formulas.html">next</a> section or return to the

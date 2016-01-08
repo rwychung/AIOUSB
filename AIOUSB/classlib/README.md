@@ -1,6 +1,6 @@
+\page classlib AIOUSB classlib
 
-
-# ATTENTION
+\section classlib_deprecated ATTENTION DEPRECATED
 
 This API is deprecated by ACCES I/O Products Inc. We are unable to devote our 
 mental compute cycles to maintaining the C++ wrapper code for our existing C

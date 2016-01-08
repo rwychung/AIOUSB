@@ -116,7 +116,7 @@ cmake -L
     
 </ol>
 
-\section install_bin_unix    Installing the binaries on UNIX
+\section install_bin_unix Installing the binaries on UNIX
 
 After the compilation of the source code do a <code>make install</code>
 to install AIOUSB. If you downloaded the binary distribution for UNIX,
