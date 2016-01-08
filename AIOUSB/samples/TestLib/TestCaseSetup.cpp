@@ -315,10 +315,9 @@ void TestCaseSetup::writeBuffer( char *filename ) {
 
 /** 
  * @brief Demonstrate bulk acquire
- * 
- * @param block_size 
- * @param over_sample 
- * @param clock_speed 
+ * @param blck_size 
+ * @param ovr_sampl 
+ * @param clk_speed 
  */
 void TestCaseSetup::doBulkAcquire(unsigned int blck_size, unsigned int ovr_sampl, unsigned int clk_speed )
 {

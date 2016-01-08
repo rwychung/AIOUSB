@@ -10,12 +10,11 @@
  *
  */
 /*! 
-\page classlib AIOUSB classlib
+\page classlib AIOUSB C++ class library
 
 \section classlib_modules Modules
 
-You can make an entity a member of a specific group by putting 
-a \ref cmdingroup "\\ingroup" command inside its documentation block.
+
 
 Note that compound entities (like classes, files and namespaces) can
 be put into multiple groups, but members (like variable, functions, typedefs
@@ -61,25 +60,16 @@ int IntegerVariable;
 /**@}*/
 \endverbatim
 
-The \ref cmdref "\\ref" command can be used to refer to a group.
-The first argument of the \\ref command should be group's label.
-To use a custom link name, you can put the name of the links in 
-double quotes after the label, as shown by the following example
 \verbatim
 This is the \ref group_label "link" to this group.
 \endverbatim
 
-The priorities of Classlib definitions are (from highest to lowest):
-\ref cmdingroup "\\ingroup", \ref cmddefgroup "\\defgroup",
-\ref cmdaddtogroup "\\addtogroup", \ref cmdweakgroup "\\weakgroup".
-The last command is exactly like \ref cmdaddtogroup "\\addtogroup"
-with a lower priority. It was added to allow "lazy" Classlib
-definitions: you can use commands with a higher priority in your .h
-files to define the hierarchy and \ref cmdweakgroup "\\weakgroup"
-in .c files without having to duplicate the hierarchy exactly.
+Stuff....add this here
 
 \par Example:
-\verbinclude group.cpp
+\verbatim
+#include group.cpp
+\endverbatim 
 
 \htmlonly
 Click <a href="examples/group/html/modules.html">here</a> 
@@ -104,11 +94,7 @@ block if you prefer C style
 comments. Note that the members of the group should be 
 physically inside the member group's body.
 
-Before the opening marker of a block a separate comment block may be 
-placed. This block should contain the \ref cmdname "@@name" 
-(or \ref cmdname "\\name") command and is used to specify the header 
-of the group. Optionally, the comment block may also contain more
-detailed information about the group.
+More stuff you need to add
 
 Nesting of member groups is not allowed. 
 
@@ -120,11 +106,9 @@ subsection of the "Static Public Members" section for instance).
 If two or more members have different types, then the group is put 
 at the same level as the automatically generated groups.
 If you want to force all member-groups of a class to be at the top level, 
-you should put a \ref cmdnosubclasslib "\\nosubclasslib" command inside the
-documentation of the class. 
+
 
 \par Example:
-\verbinclude memgrp.cpp
 
 \htmlonly
 Click <a href="examples/memgrp/html/class_test.html">here</a> 

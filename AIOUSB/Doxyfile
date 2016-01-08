@@ -194,6 +194,7 @@ TAB_SIZE               = 8
 # You can put \n's in the value part of an alias to insert newlines.
 
 ALIASES                = "copy=\par Copyright:\n&copy;"
+ALIASES               += LaTeX="\f$\mbox{\LaTeX}\f$"
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C
 # sources only. Doxygen will then generate output that is more tailored for C.
@@ -580,7 +581,7 @@ WARN_LOGFILE           =
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ../README.md doc/index.doc doc/install.doc doc/aiousb.doc doc/classlib.doc doc/java.doc doc/samples.doc classlib/ lib/ samples/
+INPUT                  = ../README.md doc/index.doc doc/install.doc doc/aiousb.doc doc/classlib.doc doc/libusb.doc doc/java.doc doc/samples.doc classlib/ lib/ samples/
 
 
 USE_MDFILE_AS_MAINPAGE = ../README.md
@@ -601,7 +602,7 @@ INPUT_ENCODING         = UTF-8
 # *.hxx *.hpp *.h++ *.idl *.odl *.cs *.php *.php3 *.inc *.m *.mm *.dox *.py
 # *.f90 *.f *.for *.vhd *.vhdl
 
-FILE_PATTERNS          = *.hpp *.cpp *.h *.c *.md
+FILE_PATTERNS          = *.hpp *.cpp *.h *.c *.md *.doc
 
 # The RECURSIVE tag can be used to turn specify whether or not subdirectories
 # should be searched for input files as well. Possible values are YES and NO.
@@ -821,7 +822,7 @@ HTML_FOOTER            =
 # the style sheet file to the HTML output directory, so don't put your own
 # stylesheet in the HTML output directory as well, or it will be erased!
 
-HTML_STYLESHEET        = ./docs/doxygen_manual.css
+HTML_STYLESHEET        = ./doc/doxygen_manual.css
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output.
 # Doxygen will adjust the colors in the stylesheet and background images
