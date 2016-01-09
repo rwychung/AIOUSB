@@ -1,3 +1,30 @@
+/**
+ * @file   continuous_mode.c
+ * @author $Format: %an <%ae>$
+ * @date   $Format: %ad$
+ * @version $Format: %h$
+ * 
+ * @page conlysamples Samples
+ * @section csamples_usb_ai16_16 USB-AIO16-16 
+ * @subsection  sample_usb_ai16_16 ContinuousMode
+ * @par ContinuousMode
+ *
+ * continuous_mode.cpp is simple program that demonstrates using
+ * the AIOUSB C library's Continuous mode acquisition API.
+ *
+ * 
+ * - Initializing and shutting down the API – USBDeviceManager::open(), USBDeviceManager::close()
+ * - Finding devices on the USB bus – USBDeviceManager::getDeviceByProductID()
+ * - Configuring the board – USBDevice::setCommTimeout(), AnalogInputSubsystem::setCalMode(), AnalogInputSubsystem::setDiscardFirstSample(), AnalogInputSubsystem::setTriggerMode(), AnalogInputSubsystem::setGainCodeAndDiffMode(), AnalogInputSubsystem::setOversample()
+ * - Installing a default calibration table – AnalogInputSubsystem::calibrate(bool,...)
+ * - Reading the analog inputs in counts – AnalogInputSubsystem::read()
+ * - Generating an external calibration table – AnalogInputSubsystem::calibrate(double[],...)
+ * 
+ *
+ * @todo Setup BUILDING Tag
+ * 
+ */
+
 #include <stdio.h>
 #include <aiousb.h>
 #include <stdio.h>
