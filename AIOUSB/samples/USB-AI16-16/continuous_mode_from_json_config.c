@@ -15,19 +15,18 @@
  * the board for acquisition. 
  *
  */
-
+#ifndef DOXYGEN_IGNORED
 #include <stdio.h>
 #include <aiousb.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <math.h>
 #include <ctype.h>
-#include <AIODataTypes.h>
-#include "AIOCountsConverter.h"
-#include "AIOUSB_Log.h"
-#include "aiocommon.h"
 #include <getopt.h>
 #include <signal.h>
+#endif
+#include "aiocommon.h"
+#include <aiousb.h>
 
 struct channel_range *get_channel_range( char *optarg );
 void process_cmd_line( struct opts *, int argc, char *argv[] );

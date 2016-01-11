@@ -6,24 +6,25 @@
  * 
  * @page sample_usb_ai16_16_continuous_mode continuous_mode.c
  *
- * @par ContinuousMode
+ * @par Continuous Mode
  *
  * continuous_mode.cpp is simple program that demonstrates using
  * the AIOUSB C library's Continuous mode acquisition API.
  *
+ * The key steps for running a continuous mode acquisition are:
  * 
- * - Initializing and shutting down the API – USBDeviceManager::open(), USBDeviceManager::close()
- * - Finding devices on the USB bus – USBDeviceManager::getDeviceByProductID()
- * - Configuring the board – USBDevice::setCommTimeout(), AnalogInputSubsystem::setCalMode(), AnalogInputSubsystem::setDiscardFirstSample(), AnalogInputSubsystem::setTriggerMode(), AnalogInputSubsystem::setGainCodeAndDiffMode(), AnalogInputSubsystem::setOversample()
- * - Installing a default calibration table – AnalogInputSubsystem::calibrate(bool,...)
- * - Reading the analog inputs in counts – AnalogInputSubsystem::read()
- * - Generating an external calibration table – AnalogInputSubsystem::calibrate(double[],...)
- * 
+ * 1. Allocate an AIOContinuousBuf using NewAIOContinuousBuf()
+ * 2. Set the channel ranges ( using AIOContinuousBufSetStartAndEndChannel ), the number of 
+ *    oversamples ( using AIOContinuousBufSetOversample ) and then the gain mode for each channel and 
+ *    whether you will use differential or single ended mode ( using AIOContinuousBufSetAllGainCodeAndDiffMode ). 
+ * 3. Save the settings to the AIO board using AIOContinuousBufSaveConfig().
+ * 4. Set the clock rate for the acquisition using AIOContinuousBufSetClock().
+ * 5. Start the acquisition with AIOContinuousBufInitiateCallbackAcquisition().
+ * 6. Process ( ie read ) the data in the AIOContinuousBuf using AIOContinuousBufReadIntegerScanCounts()
  *
- * @todo Setup BUILDING Tag
- * 
+ * @todo Reference building tag
  */
-
+#ifndef DOXYGEN_IGNORED
 #include <stdio.h>
 #include <aiousb.h>
 #include <stdio.h>
@@ -33,9 +34,11 @@
 #include <AIODataTypes.h>
 #include "AIOCountsConverter.h"
 #include "AIOUSB_Log.h"
-#include "aiocommon.h"
 #include <getopt.h>
+#endif
 
+#include <aiousb.h>
+#include "aiocommon.h"
 AIOUSB_BOOL fnd( AIOUSBDevice *dev ) { 
     if ( dev->ProductID >= USB_AI16_16A && dev->ProductID <= USB_AI12_128E ) { 
         return AIOUSB_TRUE;
@@ -83,7 +86,8 @@ main(int argc, char *argv[] )
     buf = NewAIOContinuousBufForVolts( options.index, options.num_scans , options.num_channels ,  options.num_oversamples );
 
     /**
-     * 1. Each buf should have a device index associated with it, so 
+     * @page sample_usb_ai16_16_continuous_mode
+     * 1. Each buf should have a device index associated with it, you  must setit first
      */
     AIOContinuousBufSetDeviceIndex( buf, options.index );
 
@@ -105,6 +109,7 @@ main(int argc, char *argv[] )
  
 
     /**
+     * @page sample_usb_ai16_16_continuous_mode
      * 2. Setup the Config object for Acquisition, either the more complicated 
      *    part in comments (BELOW) or using a simple interface.
      * 

@@ -1391,6 +1391,7 @@ INCLUDE_FILE_PATTERNS  =
 # instead of the = operator.
 
 PREDEFINED             = PUBLIC_EXTERN=
+PREDEFINED             += DOXYGEN_IGNORED=
 
 
 # If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then
