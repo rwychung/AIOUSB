@@ -5,10 +5,7 @@
  * @author Jimi Damon <jdamon@accesio.com>
  * @version $Format: %h$
  * 
- * @page conlysamples Samples
- *
- * @section csamples_usb_ai16_16 USB-AIO16-16 
- * @subsection sample_usb_ai16_16 Extcal
+ * @page sample_usb_ai16_16_extcal extcal.c
  *
  * @par Extcal
  * Extcal.cpp is simple program that demonstrates using

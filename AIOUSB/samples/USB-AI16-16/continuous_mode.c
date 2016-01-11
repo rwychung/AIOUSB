@@ -4,9 +4,8 @@
  * @date   $Format: %ad$
  * @version $Format: %h$
  * 
- * @page conlysamples Samples
- * @section csamples_usb_ai16_16 USB-AIO16-16 
- * @subsection  sample_usb_ai16_16 ContinuousMode
+ * @page sample_usb_ai16_16_continuous_mode continuous_mode.c
+ *
  * @par ContinuousMode
  *
  * continuous_mode.cpp is simple program that demonstrates using
