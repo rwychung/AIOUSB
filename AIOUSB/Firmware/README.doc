@@ -1,4 +1,5 @@
-/*! \page aiousb_Firmware Firmware
+/*!
+\page aiousbFirmware Firmware
 
 [TOC]
 
@@ -23,12 +24,12 @@ Setting up the operating system to automatically upload the firmware to the devi
 
 The first step is to copy the ACCES device firmware files (.hex) somewhere on the system. On some Linux systems, /usr/share/usb/ is already intended for this purpose, so that's the location we recommend. The commands to copy the firmware files are simply:
 
-~~~bash
-mkdir /usr/share/usb (if the directory doesn't already exist)
+\code{.sh}
+mkdir -p /usr/share/usb # if the directory does not already exist
 cp -p *.hex /usr/share/usb/
-chown root:root /usr/share/usb/*.hex (optional)
-chmod 444 /usr/share/usb/*.hex (optional)
-~~~
+chown root:root /usr/share/usb/*.hex # optional
+chmod 444 /usr/share/usb/*.hex # optional
+\endcode
 
 You may, of course, put the firmware files anywhere on your system,
 but if you put them somewhere other than the default of
@@ -39,8 +40,8 @@ script, then it will also have to modified similarly.
 
 Assuming you have copied the firmware files to the default location, a directory listing of /usr/share/usb/ should look similar to this:
 
-~~~bash
-Cmd> l /usr/share/usb/
+\code{.sh}
+shell> ls /usr/share/usb/
 total 244
 drwxr-xr-x   2 root root  4096 2009-12-18 19:41 ./
 drwxr-xr-x 476 root root 20480 2009-12-12 07:17 ../
@@ -60,22 +61,23 @@ drwxr-xr-x 476 root root 20480 2009-12-12 07:17 ../
 -r--r--r--   1 root root 11139 2006-04-25 11:10 USB-IIRO4-2SM.hex
 -r--r--r--   1 root root 11139 2006-04-25 11:10 USB-IIRO4-COM.hex
 -r--r--r--   1 root root 10657 2009-06-16 13:04 USBP-DIO16RO8.hex
-~~~
+\endcode
+
 (The file a3load.hex shown above is part of the fxload package and should be left alone.)
 
 # Copy Udev Rules File To System Directory  {#fxload_copyudev}
 
 The second step to automatically load firmware into the devices is to add a udev rules file to the system, which you can do using the command:
 
-~~~bash
+\code{.sh}
 cp -p 10-acces_usb.rules /etc/udev/rules.d/
 chown root:root /etc/udev/rules.d/10-acces_usb.rules (optional)
 chmod 444 /etc/udev/rules.d/10-acces_usb.rules (optional)
-~~~
+\endcode
 
 A directory listing of /etc/udev/rules.d/ should look similar to this:
 
-~~~bash
+\code{.sh}
 shell> /bin/ls -l /etc/udev/rules.d/
 total 348
 drwxr-xr-x 2 root root   4096 2010-01-22 17:35 ./
@@ -87,7 +89,7 @@ drwxr-xr-x 3 root root   4096 2009-10-27 01:56 ../
 -rw-r--r-- 1 root root    750 2009-10-27 09:18 40-xen.rules
 -rw-r--r-- 1 root root     99 2009-10-23 21:20 41-soundfont.rules
 ...
-~~~
+\endcode
 
 Once these two simple steps are completed, plugging an ACCES USB device into the system should result in its firmware being automatically uploaded and the device being made available for use.
 
@@ -104,10 +106,10 @@ on the system. If firmware is uploaded to any devices, then the script will paus
 seconds before attempting to make all ACCES USB devices on the system usable by users other
 than root. This script must be run with root privileges.
 
-~~~bash
+\code{.sh}
 fxload -t fx2 -D /dev/bus/usb/008/006 -I /usr/share/usb/USB-AI16-16.hex
 chmod 0666 /dev/bus/usb/008/007
-~~~
+\endcode
 
 In the above example a model USB-AI16-16A device was detected, the appropriate firmware was uploaded to it and it was made readable and writable by all users.
 
