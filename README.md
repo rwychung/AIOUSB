@@ -154,7 +154,7 @@ wrapper language support for the following languages:
 
 ## How to build Wrapper languages
 
-### <a name="#CMakeBuild"></a>CMake
+### <a name="#CMakeBuildWrappers"></a>CMake
 
 This is the easiest way to build the wrapper languages. Perform the following
 
@@ -179,7 +179,7 @@ cmake-gui -DCMAKE_INSTALL_PREFIX=/some/path/Dir ..
 
 
 
-### Regular Make system
+### Regular Make system for building wrapper language support
 
 Perform this step *AFTER* you have already followed the instructions
 for building the aiousb libraries.  
